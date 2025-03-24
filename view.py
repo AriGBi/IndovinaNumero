@@ -16,9 +16,9 @@ class View(object):
         self._txtOutTMax= ft.TextField(label="Tentativi Max ", disabled=True, width=200, value=self._controller.getTMax()) #metto le tonde dopo il metodo del controller per SALVARE il return
         self._txtOutT=ft.TextField(label="Tentativi Rimanenti", disabled =True, width=200)
 
-        self._txtIn=ft.TextField(label="Tentativo", width=200)
+        self._txtIn=ft.TextField(label="Tentativo", width=200, disabled=True) #lo creo disabilitato così il giocatore è obbligato a schiacciare prima Reset e poi inizia
         self._btnReset= ft.ElevatedButton(text="Nuova Partita", width=200, on_click=self._controller.reset) #non metto le parentesi dopo il metodo del controller perchè voglio semplicemente ESEGIRLO, non salvarmi il return
-        self.btnPlay=ft.ElevatedButton(text="Gioca", width=200, on_click=self._controller.play)
+        self.btnPlay=ft.ElevatedButton(text="Gioca", width=200, on_click=self._controller.play, disabled=True)
 
         self._lv=ft.ListView(expand=True) #expand permette di scrollare
 
